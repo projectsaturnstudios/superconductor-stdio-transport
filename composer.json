@@ -1,0 +1,33 @@
+{
+    "name": "superconductor/stdio-transport",
+    "description": "Stdio transport protocol for the Superconductor MCP framework.",
+    "type": "library",
+    "version": "20241105.1.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Project Saturn Studios, LLC",
+            "email": "info@projectsaturnstudios.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "projectsaturnstudios/superconductor-core": "^20241105.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MCP\\Transports\\Stdio\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MCP\\Transports\\Stdio\\Providers\\StdioTransportProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    }
+}
