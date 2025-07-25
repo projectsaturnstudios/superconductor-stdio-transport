@@ -2,7 +2,7 @@
     "name": "superconductor/stdio-transport",
     "description": "Stdio transport protocol for the Superconductor MCP framework.",
     "type": "library",
-    "version": "20241105.1.0",
+    "version": "20241105.1.3",
     "license": "MIT",
     "authors": [
         {
