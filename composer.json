@@ -2,7 +2,7 @@
     "name": "superconductor/stdio-transport",
     "description": "Stdio transport protocol for the Superconductor MCP framework.",
     "type": "library",
-    "version": "20241105.1.3",
+    "version": "20241105.5.0",
     "license": "MIT",
     "authors": [
         {
@@ -12,22 +12,45 @@
     ],
     "require": {
         "php": "^8.2",
-        "projectsaturnstudios/superconductor-core": "^20241105.1.1"
+        "react/stream": "^1.4",
+        "react/event-loop": "^1.5",
+        "lorisleiva/laravel-actions": "^2.6",
+        "superconductor/mcp": "^20241105.5.0",
+        "projectsaturnstudios/quickuuid": "^0.2.0",
+        "projectsaturnstudios/laravel-design-patterns": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
-            "MCP\\Transports\\Stdio\\": "src/"
+            "Superconductor\\Transports\\Stdio\\": "src/"
         }
     },
     "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
-                "MCP\\Transports\\Stdio\\Providers\\StdioTransportProvider"
+                "Superconductor\\Transports\\Stdio\\Providers\\StdioTransportServiceProvider"
             ],
             "aliases": {
 
             }
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.8",
+        "react/event-loop": "^1.5",
+        "react/stream": "^1.4",
+        "illuminate/container": "^12.0",
+        "illuminate/support": "^12.24",
+        "illuminate/events": "^12.24"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
